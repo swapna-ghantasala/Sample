@@ -1,0 +1,6 @@
+reporting:
+    reports:
+        - clover
+    dir: ./output
+    report-config:
+        clover: {file: clover.xml}

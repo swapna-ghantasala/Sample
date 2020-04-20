@@ -1,0 +1,13 @@
+version: '2.1'
+services:
+  lint:
+    build:
+      context: .
+    command: npm run lint
+  tests:
+    image: docker.labnoratory.com/bamboo-sample-project
+    build:
+      context: .
+    command: npm run ci
+    volumes:
+      - ./output:/app/output
